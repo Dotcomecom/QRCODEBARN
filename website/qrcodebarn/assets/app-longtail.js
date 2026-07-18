@@ -1,9 +1,12 @@
+(function loadSharedGeneratorRuntime(){
+  if(window.__qrbLongtailBridgeLoaded) return;
+  window.__qrbLongtailBridgeLoaded=true;
 
-function byId(id){return document.getElementById(id)}function getField(id){var el=byId(id);return el?el.value.trim():""}
-function ensureContentAuthorityPackScript(){var existing=document.querySelector('script[src="/assets/content-authority-pack.js"]');if(existing)return;var s=document.createElement('script');s.src='/assets/content-authority-pack.js';s.defer=true;document.head.appendChild(s)}
-function escapeWifi(s){return String(s).replace(/([\\;,:"])/g,"\\$1")}
-function buildPayload(type){if(type==="wifi"){var ssid=getField("wifi_ssid"),pass=getField("wifi_password"),enc=getField("wifi_encryption")||"WPA";return "WIFI:T:"+enc+";S:"+escapeWifi(ssid)+";P:"+escapeWifi(pass)+";;"}if(type==="whatsapp"){var n=getField("wa_phone").replace(/[^\d]/g,""),m=encodeURIComponent(getField("wa_message"));return "https://wa.me/"+n+(m?"?text="+m:"")}return getField("qr_text")}
-function generateQR(type){var payload=buildPayload(type);if(!payload){alert("Enter something to generate a QR code.");return}var box=byId("qrcode");box.innerHTML="";try{if(typeof qrcode==="function"){var qr=qrcode(0,"M");qr.addData(payload);qr.make();box.innerHTML=qr.createSvgTag({cellSize:6,margin:3})}else{var img=document.createElement("img");img.alt="Generated QR code";img.width=220;img.height=220;img.src="https://api.qrserver.com/v1/create-qr-code/?format=svg&size=300x300&data="+encodeURIComponent(payload);box.appendChild(img)}byId("qr_payload").value=payload;byId("download_png").style.display="inline-flex";byId("download_svg").style.display="inline-flex"}catch(e){box.innerHTML="<p>That content is too long for this QR code. Try a shorter link or message.</p>"}}
-function downloadSVG(){var svg=document.querySelector("#qrcode svg"),img=document.querySelector("#qrcode img");if(svg){var blob=new Blob([svg.outerHTML],{type:"image/svg+xml"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="qrcodebarn-qr-code.svg";a.click();URL.revokeObjectURL(a.href)}else if(img){window.open(img.src,"_blank")}else alert("Generate a QR code first.")}
-function downloadPNG(){var svg=document.querySelector("#qrcode svg");if(!svg){alert("Generate a QR code first, then use SVG download for this fallback preview.");return}var canvas=document.createElement("canvas"),ctx=canvas.getContext("2d"),xml=new XMLSerializer().serializeToString(svg),img=new Image(),svg64=btoa(unescape(encodeURIComponent(xml)));img.onload=function(){canvas.width=img.width*3;canvas.height=img.height*3;ctx.fillStyle="#fff";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);var a=document.createElement("a");a.href=canvas.toDataURL("image/png");a.download="qrcodebarn-qr-code.png";a.click()};img.src="data:image/svg+xml;base64,"+svg64}
-document.addEventListener("DOMContentLoaded",function(){ensureContentAuthorityPackScript();var auto=byId("auto_generate_type");if(auto&&auto.value){generateQR(auto.value)}})
+  const hasSharedRuntime=document.querySelector('script[src="/assets/app.js"],script[src="assets/app.js"]');
+  if(hasSharedRuntime) return;
+
+  const script=document.createElement('script');
+  script.src='/assets/app.js';
+  script.async=false;
+  document.head.appendChild(script);
+})();

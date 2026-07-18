@@ -24,6 +24,154 @@ function getInlineField(id){
   return node ? node.value.trim() : '';
 }
 
+function findQrNodes(){
+  const roots=['#qrcode','#qrOut','#qrOutput'];
+  let svg=null;
+  let canvas=null;
+  let image=null;
+
+  roots.forEach((selector)=>{
+    const root=document.querySelector(selector);
+    if(!root) return;
+    if(!svg) svg=root.querySelector('svg');
+    if(!canvas) canvas=root.querySelector('canvas');
+    if(!image) image=root.querySelector('img');
+  });
+
+  return {svg,canvas,image};
+}
+
+function findDownloadButton(key){
+  const candidates={
+    png:['download_png','downloadPng'],
+    svg:['download_svg','downloadSvg'],
+    pdf:['download_pdf','downloadPdf']
+  };
+  for(const id of candidates[key]){
+    const node=document.getElementById(id);
+    if(node) return node;
+  }
+  const onclickName=key==='png'?'downloadPNG':key==='svg'?'downloadSVG':'downloadPDF';
+  return document.querySelector(`[onclick*="${onclickName}"]`);
+}
+
+function createDownloadButtonLike(base,key){
+  const button=document.createElement(base && base.tagName==='A' ? 'a' : 'button');
+  const names={png:'PNG',svg:'SVG',pdf:'PDF'};
+  const ids={png:'download_png',svg:'download_svg',pdf:'download_pdf'};
+  button.id=ids[key];
+  button.textContent=`Download ${names[key]}`;
+  button.style.display='none';
+  button.className=base && base.className ? base.className : (key==='png'?'secondary':'light');
+  if(button.tagName==='BUTTON') button.type='button';
+  if(base && base.parentNode){
+    base.parentNode.insertBefore(button,base.nextSibling);
+  }
+  return button;
+}
+
+function bindDownloadHandler(node,key){
+  if(!node || node.dataset.downloadBound==='true') return;
+  const fnName=key==='png'?'downloadPNG':key==='svg'?'downloadSVG':'downloadPDF';
+  node.addEventListener('click',(event)=>{
+    event.preventDefault();
+    if(typeof window[fnName]==='function') window[fnName]();
+  });
+  node.dataset.downloadBound='true';
+}
+
+function ensureDownloadButtons(){
+  const png=findDownloadButton('png');
+  const svg=findDownloadButton('svg');
+  const pdf=findDownloadButton('pdf');
+  const base=png || svg;
+  const ensured={
+    png:png || (base ? createDownloadButtonLike(base,'png') : null),
+    svg:svg || (base ? createDownloadButtonLike(base,'svg') : null),
+    pdf:pdf || (base ? createDownloadButtonLike(base,'pdf') : null)
+  };
+  bindDownloadHandler(ensured.png,'png');
+  bindDownloadHandler(ensured.svg,'svg');
+  bindDownloadHandler(ensured.pdf,'pdf');
+  return ensured;
+}
+
+function showDownloadButtons(){
+  const buttons=ensureDownloadButtons();
+  ['png','svg','pdf'].forEach((key)=>{
+    if(buttons[key]) buttons[key].style.display='inline-flex';
+  });
+}
+
+function triggerFileDownload(href,filename){
+  const link=document.createElement('a');
+  link.href=href;
+  link.download=filename;
+  link.click();
+}
+
+function getCanvasFromQr(){
+  const {svg,canvas,image}=findQrNodes();
+  if(canvas){
+    return Promise.resolve(canvas);
+  }
+  if(svg){
+    return new Promise((resolve,reject)=>{
+      const xml=new XMLSerializer().serializeToString(svg);
+      const encoded='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));
+      const img=new Image();
+      img.onload=()=>{
+        const drawCanvas=document.createElement('canvas');
+        drawCanvas.width=img.width*3;
+        drawCanvas.height=img.height*3;
+        const ctx=drawCanvas.getContext('2d');
+        ctx.fillStyle='#fff';
+        ctx.fillRect(0,0,drawCanvas.width,drawCanvas.height);
+        ctx.drawImage(img,0,0,drawCanvas.width,drawCanvas.height);
+        resolve(drawCanvas);
+      };
+      img.onerror=()=>reject(new Error('Could not render SVG as canvas'));
+      img.src=encoded;
+    });
+  }
+  if(image){
+    return new Promise((resolve,reject)=>{
+      const img=new Image();
+      img.crossOrigin='anonymous';
+      img.onload=()=>{
+        const drawCanvas=document.createElement('canvas');
+        drawCanvas.width=img.width*3;
+        drawCanvas.height=img.height*3;
+        const ctx=drawCanvas.getContext('2d');
+        ctx.fillStyle='#fff';
+        ctx.fillRect(0,0,drawCanvas.width,drawCanvas.height);
+        ctx.drawImage(img,0,0,drawCanvas.width,drawCanvas.height);
+        resolve(drawCanvas);
+      };
+      img.onerror=()=>reject(new Error('Could not render image as canvas'));
+      img.src=image.src;
+    });
+  }
+  return Promise.reject(new Error('No generated QR code found'));
+}
+
+let pdfLibraryPromise;
+function ensurePdfLibrary(){
+  if(window.jspdf && window.jspdf.jsPDF) return Promise.resolve(window.jspdf.jsPDF);
+  if(pdfLibraryPromise) return pdfLibraryPromise;
+  pdfLibraryPromise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src='https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js';
+    script.onload=()=>{
+      if(window.jspdf && window.jspdf.jsPDF) resolve(window.jspdf.jsPDF);
+      else reject(new Error('PDF library loaded but was unavailable'));
+    };
+    script.onerror=()=>reject(new Error('PDF library could not be loaded'));
+    document.head.appendChild(script);
+  });
+  return pdfLibraryPromise;
+}
+
 function escapeWifiValue(value){
   return String(value).replace(/([\\;,:"])/g,'\\$1');
 }
@@ -76,8 +224,6 @@ async function renderInlineQrcode(type){
   const payload=buildInlinePayload(type);
   const box=document.getElementById('qrcode');
   const payloadField=document.getElementById('qr_payload');
-  const pngButton=document.getElementById('download_png');
-  const svgButton=document.getElementById('download_svg');
   if(!box) return;
   if(!payload){
     alert('Enter something to generate a QR code.');
@@ -93,23 +239,19 @@ async function renderInlineQrcode(type){
     qr.make();
     box.innerHTML=qr.createSvgTag({cellSize:6,margin:3});
     if(payloadField) payloadField.value=payload;
-    if(pngButton) pngButton.style.display='inline-flex';
-    if(svgButton) svgButton.style.display='inline-flex';
+    showDownloadButtons();
   }catch(error){
     box.innerHTML='<p>That content is too long for this QR code. Try a shorter link or message.</p>';
   }
 }
 
 async function downloadInlineSvg(){
-  const svg=document.querySelector('#qrcode svg');
-  const image=document.querySelector('#qrcode img');
+  const {svg,image}=findQrNodes();
   if(svg){
     const blob=new Blob([svg.outerHTML],{type:'image/svg+xml'});
-    const link=document.createElement('a');
-    link.href=URL.createObjectURL(blob);
-    link.download='qrcodebarn-qr-code.svg';
-    link.click();
-    URL.revokeObjectURL(link.href);
+    const url=URL.createObjectURL(blob);
+    triggerFileDownload(url,'qrcodebarn-qr-code.svg');
+    URL.revokeObjectURL(url);
     return;
   }
   if(image){
@@ -120,35 +262,30 @@ async function downloadInlineSvg(){
 }
 
 async function downloadInlinePng(){
-  const svg=document.querySelector('#qrcode svg');
-  if(!svg){
-    alert('Generate a QR code first, then use SVG download for this fallback preview.');
-    return;
+  try{
+    const canvas=await getCanvasFromQr();
+    triggerFileDownload(canvas.toDataURL('image/png'),'qrcodebarn-qr-code.png');
+  }catch(error){
+    alert('Generate a QR code first.');
   }
-  const canvas=document.createElement('canvas');
-  const context=canvas.getContext('2d');
-  const xml=new XMLSerializer().serializeToString(svg);
-  const image=new Image();
-  const svg64=btoa(unescape(encodeURIComponent(xml)));
+}
 
-  image.onload=function(){
-    canvas.width=image.width*3;
-    canvas.height=image.height*3;
-    context.fillStyle='#fff';
-    context.fillRect(0,0,canvas.width,canvas.height);
-    context.drawImage(image,0,0,canvas.width,canvas.height);
-    const link=document.createElement('a');
-    link.href=canvas.toDataURL('image/png');
-    link.download='qrcodebarn-qr-code.png';
-    link.click();
-  };
-
-  image.src='data:image/svg+xml;base64,'+svg64;
+async function downloadInlinePdf(){
+  try{
+    const [canvas,JsPdf]=await Promise.all([getCanvasFromQr(),ensurePdfLibrary()]);
+    const side=Math.max(canvas.width,canvas.height);
+    const pdf=new JsPdf({orientation:'portrait',unit:'pt',format:[side,side]});
+    pdf.addImage(canvas.toDataURL('image/png'),'PNG',0,0,side,side);
+    pdf.save('qrcodebarn-qr-code.pdf');
+  }catch(error){
+    alert('Generate a QR code first.');
+  }
 }
 
 window.generateQR=renderInlineQrcode;
 window.downloadSVG=downloadInlineSvg;
 window.downloadPNG=downloadInlinePng;
+window.downloadPDF=downloadInlinePdf;
 
 const COMPONENT_FALLBACKS={
   hero:'<section class="rev2a-hero"><div class="wrap"><h1>Free QR Code Generator</h1><p>The generator section is temporarily unavailable. Please refresh the page.</p><p><a class="button rev2a-primary" href="/">Reload page</a></p></div></section>',
@@ -203,11 +340,10 @@ ready(async()=>{
   ensureHeroSystemScript();
   ensureContentAuthorityPackScript();
   await loadComponents();
+  ensureDownloadButtons();
   const form=document.getElementById('qrForm');
   if(form){
     const out=document.getElementById('qrOut')||document.getElementById('qrOutput')||document.getElementById('qrcode');
-    const dl=document.getElementById('downloadPng')||document.getElementById('download_png');
-    const sv=document.getElementById('downloadSvg')||document.getElementById('download_svg');
     function makePayload(){
       const type=(document.getElementById('qrType')||{}).value||'text';
       const v=id=>(document.getElementById(id)||{}).value||'';
@@ -228,9 +364,7 @@ ready(async()=>{
       try{
         new QRCode(out,{text:data,width:240,height:240,colorDark:document.getElementById('fg').value||'#111827',colorLight:document.getElementById('bg').value||'#ffffff',correctLevel:QRCode.CorrectLevel.H});
         setTimeout(()=>{
-          const img=out.querySelector('img')||out.querySelector('canvas');
-          if(img&&dl){let url=img.tagName==='CANVAS'?img.toDataURL('image/png'):img.src;dl.href=url;dl.download='qrcodebarn-qr.png';}
-          if(img&&sv){let url=img.tagName==='CANVAS'?img.toDataURL('image/svg+xml'):img.src;sv.href=url;sv.download='qrcodebarn-qr.svg';}
+          showDownloadButtons();
         },250);
       }catch(e){out.textContent='Could not generate QR code. Please shorten the content and try again.'}
     }
