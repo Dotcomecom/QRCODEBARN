@@ -46,8 +46,6 @@
 .'+HERO_CLASS+'__cta--primary:hover{background:#e96d0e;text-decoration:none}\
 .'+HERO_CLASS+'__cta--secondary{background:#fff;color:#0b1220;border-color:#d4dfef}\
 .'+HERO_CLASS+'__cta--secondary:hover{border-color:#adc0dd;text-decoration:none}\
-.'+HERO_CLASS+'__focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 0;padding:0;list-style:none}\
-.'+HERO_CLASS+'__focus li{margin:0;padding:11px 12px;border:1px solid #d9e4f1;border-radius:14px;background:rgba(255,255,255,.9);box-shadow:0 10px 24px rgba(15,23,42,.04);font-size:.92rem;font-weight:750;line-height:1.35;color:#17202a}\
 .'+HERO_CLASS+'__card{background:#fff;border:1px solid #d9e4f1;border-radius:22px;padding:18px;box-shadow:0 18px 40px rgba(15,23,42,.08);min-height:320px;max-height:420px;display:flex;flex-direction:column;gap:14px}\
 .'+HERO_CLASS+'__card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}\
 .'+HERO_CLASS+'__card-kicker{margin:0;color:#2864ff;font-size:.72rem;font-weight:950;letter-spacing:.13em;text-transform:uppercase}\
@@ -56,11 +54,22 @@
 .'+HERO_CLASS+'__tile{width:104px;height:104px;border-radius:20px;padding:12px;background:linear-gradient(135deg,#0f172a 0%,#17325f 58%,#0f9f8f 100%);display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:1fr;gap:4px;flex:0 0 auto;box-shadow:0 14px 26px rgba(15,23,42,.16)}\
 .'+HERO_CLASS+'__tile span{display:block;border-radius:4px;background:rgba(255,255,255,.95)}\
 .'+HERO_CLASS+'__uses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}\
-.'+HERO_CLASS+'__uses li{padding:11px 12px;border-radius:14px;background:#f8fbff;border:1px solid #dde8f4;color:#132133;font-weight:750;font-size:.9rem;line-height:1.35}\
+.'+HERO_CLASS+'__uses li{margin:0}\
+.'+HERO_CLASS+'__chip{display:block;padding:11px 12px;border-radius:999px;background:#f8fbff;border:1px solid #dde8f4;color:#132133;font-weight:750;font-size:.9rem;line-height:1.35;text-align:left}\
+.'+HERO_CLASS+'__chip--info{cursor:default;box-shadow:none}\
+.'+HERO_CLASS+'__chip--link{text-decoration:none;transition:border-color .18s ease,background .18s ease,color .18s ease}\
+.'+HERO_CLASS+'__chip--link:hover{background:#eef6ff;border-color:#bfd6f2;color:#0b1220;text-decoration:none}\
 .'+HERO_CLASS+'__foot{margin-top:auto;padding-top:4px;color:#64748b;font-size:.84rem;line-height:1.5}\
-@media (max-width:920px){.'+HERO_CLASS+'__grid{grid-template-columns:1fr}.'+HERO_CLASS+'__card{max-height:none}.'+HERO_CLASS+'__focus{grid-template-columns:1fr 1fr}}\
-@media (max-width:640px){.'+HERO_CLASS+'{padding:16px}.'+HERO_CLASS+'__focus,.'+HERO_CLASS+'__uses{grid-template-columns:1fr}.'+HERO_CLASS+'__tile{width:88px;height:88px;padding:10px}}';
+@media (max-width:920px){.'+HERO_CLASS+'__grid{grid-template-columns:1fr}.'+HERO_CLASS+'__card{max-height:none}}\
+@media (max-width:640px){.'+HERO_CLASS+'{padding:16px}.'+HERO_CLASS+'__uses{grid-template-columns:1fr}.'+HERO_CLASS+'__tile{width:88px;height:88px;padding:10px}}';
     document.head.appendChild(style);
+  }
+
+  function useItemParts(item){
+    if(item && typeof item==='object'){
+      return {label:item.label||'',href:item.href||''};
+    }
+    return {label:String(item||''),href:''};
   }
 
   function getMain(){
@@ -172,14 +181,6 @@
     secondary.href='/qr-code-templates.html';
     secondary.textContent='Browse QR Templates';
 
-    var focus=document.createElement('ul');
-    focus.className=HERO_CLASS+'__focus';
-    copy.uses.slice(0,4).forEach(function(item){
-      var li=document.createElement('li');
-      li.textContent=item;
-      focus.appendChild(li);
-    });
-
     actions.appendChild(primary);
     actions.appendChild(secondary);
 
@@ -192,7 +193,6 @@
     content.appendChild(titleNode);
     content.appendChild(intro);
     content.appendChild(actions);
-    content.appendChild(focus);
 
     var card=document.createElement('div');
     card.className=HERO_CLASS+'__card';
@@ -228,8 +228,19 @@
     var uses=document.createElement('ul');
     uses.className=HERO_CLASS+'__uses';
     copy.uses.forEach(function(item){
+      var parts=useItemParts(item);
       var li=document.createElement('li');
-      li.textContent=item;
+      var chip;
+      if(parts.href){
+        chip=document.createElement('a');
+        chip.href=parts.href;
+        chip.className=HERO_CLASS+'__chip '+HERO_CLASS+'__chip--link';
+      }else{
+        chip=document.createElement('span');
+        chip.className=HERO_CLASS+'__chip '+HERO_CLASS+'__chip--info';
+      }
+      chip.textContent=parts.label;
+      li.appendChild(chip);
       uses.appendChild(li);
     });
 
