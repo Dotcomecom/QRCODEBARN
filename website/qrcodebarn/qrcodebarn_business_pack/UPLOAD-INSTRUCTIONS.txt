@@ -1,0 +1,20 @@
+QRCodeBarn Business Pack
+
+Upload all files in this ZIP into public_html for qrcodebarn.com.
+
+Files added:
+- qr-code-menu-generator.html
+- qr-code-for-restaurants.html
+- qr-code-for-events.html
+- qr-code-for-wedding-invitations.html
+- qr-code-for-google-reviews.html
+- styles-business.css
+- qr-page.js
+- sitemap.xml
+- robots.txt
+
+After upload:
+1. Visit each new page in an incognito/private browser.
+2. Check https://www.qrcodebarn.com/sitemap.xml.
+3. Resubmit sitemap.xml in Google Search Console.
+4. Do not request indexing for every page manually if quota is limited.

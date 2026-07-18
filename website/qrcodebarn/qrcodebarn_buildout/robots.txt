@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.qrcodebarn.com/sitemap.xml

@@ -1,0 +1,10 @@
+QRCodeBarn Schema Hard Reset
+
+Source ZIP: qrcodebarn_structured_data_fix.zip
+HTML files scanned: 182
+Files with JSON-LD removed: 55
+Safe schema added to: index.html, what-is-a-qr-code.html, static-vs-dynamic-qr-codes.html, qr-codes-for-restaurants.html
+
+All remaining JSON-LD blocks parse as valid JSON.
+This pack is intended to clear Google Search Console error:
+Structured data with syntax errors detected / Incorrect value type.

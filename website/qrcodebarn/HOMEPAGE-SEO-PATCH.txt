@@ -1,0 +1,26 @@
+HOMEPAGE SEO PATCH FOR index.html
+
+Replace title with:
+<title>Free QR Code Generator & QR Code Maker Online | QRCodeBarn</title>
+
+Replace meta description with:
+<meta name="description" content="Create free QR codes online in seconds. QR code generator, QR code maker, QR creator and free QR code builder for websites, WiFi, email, phone numbers, events and business cards. No signup required.">
+
+Replace H1 with:
+<h1>Free QR Code Generator, QR Code Maker & QR Creator Online</h1>
+
+Add below the generator:
+<section class="content-section">
+  <h2>Free QR Code Generator Online</h2>
+  <p>QRCodeBarn is a free QR code generator that lets you create QR codes for websites, business cards, WiFi networks, events, restaurants, menus, email addresses and phone numbers. Our QR code maker works online with no software installation and no registration required.</p>
+  <p>Whether you need a QR code creator for marketing campaigns, product packaging, flyers, posters or customer engagement, you can generate QR codes instantly and download them for free.</p>
+  <h2>Popular QR Code Maker Features</h2>
+  <ul>
+    <li>No signup required for simple QR codes</li>
+    <li>Generate QR codes online instantly</li>
+    <li>Create QR codes for websites and URLs</li>
+    <li>WiFi QR code generator</li>
+    <li>Email, phone and SMS QR codes</li>
+    <li>Free QR code maker for business cards, events and restaurants</li>
+  </ul>
+</section>

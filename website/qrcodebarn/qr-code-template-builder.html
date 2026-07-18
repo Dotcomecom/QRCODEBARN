@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5QWJQH4FE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D5QWJQH4FE');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QR Code Template Builder | QRCodeBarn</title>
+<meta name="description" content="Create a finished printable QR code poster, WiFi card, review sign, business card or event check-in sheet. Enter your URL, choose a template and download the finished design.">
+<link rel="canonical" href="https://www.qrcodebarn.com/qr-code-template-builder.html">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/assets/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378599294878032" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script src="/assets/template-builder.js" defer></script>
+
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/">QRCode<span>Barn</span></a><nav class="nav"><a href="/">Generator</a><a href="/qr-code-tools.html">Tools</a><a href="/qr-code-industries.html">Industries</a><a href="/qr-code-templates.html">Templates</a><a href="/qr-code-guides.html">Guides</a><a href="/faq.html">FAQ</a></nav></div></header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">New • finished printable QR assets</span>
+      <h1 class="h1">QR Code Template Builder</h1>
+      <p class="lead">Enter your URL or WiFi details, choose a printable template, preview the finished design and download it as a print-ready PDF, PNG or SVG with the QR code already embedded.</p>
+      <p><a class="button" href="#builder">Build a template</a> <a class="button alt" href="/qr-code-templates.html">See all templates</a></p>
+    </div>
+    <div class="panel">
+      <h2>What this does</h2>
+      <p>Most QR tools only give you a square QR code. This builder creates the finished sign, card or poster you actually want to print.</p>
+      <ul>
+        <li>Restaurant menu signs</li>
+        <li>WiFi welcome cards</li>
+        <li>Google review posters</li>
+        <li>Business card QR layouts</li>
+        <li>Event check-in posters</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="builder">
+<div class="wrap builder-layout">
+  <div class="panel builder-form-panel">
+    <h2>1. Enter the QR details</h2>
+    <form id="templateForm">
+      <label>QR type</label>
+      <select id="tbType">
+        <option value="url">Website / link</option>
+        <option value="wifi">WiFi network</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone number</option>
+        <option value="sms">SMS message</option>
+      </select>
+
+      <div data-tb-fields="url">
+        <label>URL or text</label>
+        <textarea id="tbUrl" placeholder="https://example.com">https://www.qrcodebarn.com</textarea>
+      </div>
+
+      <div data-tb-fields="wifi" style="display:none">
+        <label>WiFi network name</label>
+        <input id="tbWifiName" placeholder="Guest WiFi">
+        <label>WiFi password</label>
+        <input id="tbWifiPass" placeholder="password">
+        <label>Security</label>
+        <select id="tbWifiSecurity"><option>WPA</option><option>WEP</option><option>nopass</option></select>
+      </div>
+
+      <div data-tb-fields="email" style="display:none">
+        <label>Email address</label>
+        <input id="tbEmail" placeholder="hello@example.com">
+        <label>Subject</label>
+        <input id="tbEmailSubject" placeholder="Customer enquiry">
+      </div>
+
+      <div data-tb-fields="phone" style="display:none">
+        <label>Phone number</label>
+        <input id="tbPhone" placeholder="+441234567890">
+      </div>
+
+      <div data-tb-fields="sms" style="display:none">
+        <label>Phone number</label>
+        <input id="tbSmsPhone" placeholder="+441234567890">
+        <label>Message</label>
+        <textarea id="tbSmsText" placeholder="Please send me more information."></textarea>
+      </div>
+
+      <h2>2. Choose a template</h2>
+      <label>Template</label>
+      <select id="tbTemplate">
+        <option value="restaurant">Restaurant table menu sign</option>
+        <option value="wifi">WiFi welcome card</option>
+        <option value="review">Google review poster</option>
+        <option value="holiday">Holiday cottage WiFi card</option>
+        <option value="business">Business card QR layout</option>
+        <option value="event">Event check-in poster</option>
+      </select>
+
+      <h2>3. Customise the wording</h2>
+      <label>Business / venue name</label>
+      <input id="tbBusiness" placeholder="Your business name" value="QRCodeBarn">
+
+      <label>Heading</label>
+      <input id="tbHeading" value="Scan here">
+
+      <label>Short message</label>
+      <textarea id="tbMessage">Point your phone camera at the QR code.</textarea>
+
+      <div class="row">
+        <div><label>Main colour</label><input id="tbAccent" type="color" value="#ff6b1a"></div>
+        <div><label>QR colour</label><input id="tbQrColor" type="color" value="#111827"></div>
+      </div>
+
+      <label>Optional logo</label>
+      <input id="tbLogo" type="file" accept="image/*">
+      <p class="muted">Logo stays inside your browser. It is not uploaded anywhere.</p>
+
+      <button class="button" type="button" id="tbDownloadPdf">Download / Print PDF</button>
+      <button class="button alt" type="button" id="tbDownloadPng">Download PNG</button>
+      <button class="button alt" type="button" id="tbDownloadSvg">Download SVG</button>
+    </form>
+  </div>
+
+  <div class="panel preview-panel builder-preview-panel">
+    <h2>Live preview</h2>
+    <div id="qrHidden" aria-hidden="true"></div>
+    <div id="templatePreview" class="template-preview"></div>
+    <p class="muted">Always test the printed QR code with a phone before displaying it publicly.</p>
+  </div>
+</div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Why use a QR template builder?</h2>
+    <div class="grid grid-3">
+      <article class="card"><h3>Faster print jobs</h3><p>Create the complete poster or card in one place instead of copying QR images into a separate design tool.</p></article>
+      <article class="card"><h3>Cleaner business assets</h3><p>Use consistent headings, spacing and QR placement for menus, reviews, events and WiFi access.</p></article>
+      <article class="card"><h3>No account needed</h3><p>The builder runs in your browser. QRCodeBarn does not require a login to create a printable design.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="wrap footgrid"><div><div class="logo">QRCode<span>Barn</span></div><p>Free QR code tools, templates and practical QR guides for businesses, events, restaurants, schools and creators.</p></div><div><h3>Tools</h3><p><a href="/free-qr-code-generator.html">QR Generator</a><br><a href="/wifi-qr-code-generator.html">WiFi QR</a><br><a href="/qr-code-template-builder.html">Template Builder</a></p></div><div><h3>Resources</h3><p><a href="/qr-code-guides.html">Guides</a><br><a href="/qr-code-templates.html">Templates</a><br><a href="/qr-code-industries.html">Industries</a></p></div><div><h3>Site</h3><p><a href="/about.html">About</a><br><a href="/privacy.html">Privacy</a><br><a href="/terms.html">Terms</a><br><a href="/contact.html">Contact</a></p></div></div><div class="publisher">Owned and operated by <strong>The AI Barn</strong>, 124 City Road, London, EC1V 2NX, United Kingdom.</div></footer>
+</body>
+</html>

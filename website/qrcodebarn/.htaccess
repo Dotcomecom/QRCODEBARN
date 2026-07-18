@@ -1,0 +1,5 @@
+# QRCodeBarn canonical host: force www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^qrcodebarn\.com$ [NC]
+RewriteRule ^(.*)$ https://www.qrcodebarn.com/$1 [L,R=301]
+

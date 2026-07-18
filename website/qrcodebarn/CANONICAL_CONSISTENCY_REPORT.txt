@@ -1,0 +1,70 @@
+QRCodeBarn Canonical Consistency Pack
+
+Canonical hostname chosen: https://www.qrcodebarn.com
+
+HTML files scanned: 182
+Canonical tags updated: 47
+Canonical tags added: 0
+Canonical tags already OK: 134
+Pages missing <head>: 1
+Sitemaps normalised to www: 1
+robots.txt sitemap directive updated: False
+.htaccess redirect block added: True
+
+Server redirect added:
+https://qrcodebarn.com/* -> https://www.qrcodebarn.com/*
+
+Updated canonical files:
+create-qr-code-free.html
+free-qr-code-maker.html
+generate-qr-code-online.html
+index.html
+qr-code-business-ideas.html
+qr-code-creator.html
+qr-code-for-airbnb.html
+qr-code-for-booking-property.html
+qr-code-for-email.html
+qr-code-for-google-reviews-uk.html
+qr-code-for-guest-welcome-book.html
+qr-code-for-guest-wifi.html
+qr-code-for-holiday-cottage.html
+qr-code-for-pdf.html
+qr-code-for-phone-number.html
+qr-code-for-property-brochures.html
+qr-code-for-restaurant-menu.html
+qr-code-for-restaurant-pdf-menu.html
+qr-code-for-sms.html
+qr-code-for-social-media.html
+qr-code-for-whatsapp-business.html
+qr-code-for-wifi.html
+qr-code-generator.html
+qr-code-maker.html
+qr-code-svg-generator.html
+qrcodebarn_buildout/bulk-qr-code-generator-guide.html
+qrcodebarn_buildout/free-qr-code-generator-guide.html
+qrcodebarn_buildout/index.html
+qrcodebarn_buildout/qr-code-analytics-guide.html
+qrcodebarn_buildout/qr-code-best-practices.html
+qrcodebarn_buildout/qr-code-design-tips.html
+qrcodebarn_buildout/qr-code-error-correction.html
+qrcodebarn_buildout/qr-code-for-business-card.html
+qrcodebarn_buildout/qr-code-for-events.html
+qrcodebarn_buildout/qr-code-for-restaurants.html
+qrcodebarn_buildout/qr-code-for-wifi.html
+qrcodebarn_buildout/qr-code-menu-generator.html
+qrcodebarn_buildout/qr-code-printing-guide.html
+qrcodebarn_buildout/qr-code-security-guide.html
+qrcodebarn_buildout/qr-code-size-guide.html
+qrcodebarn_buildout/qr-code-with-logo.html
+qrcodebarn_buildout/static-vs-dynamic-qr-codes.html
+qrcodebarn_business_pack/qr-code-for-events.html
+qrcodebarn_business_pack/qr-code-for-google-reviews.html
+qrcodebarn_business_pack/qr-code-for-restaurants.html
+qrcodebarn_business_pack/qr-code-for-wedding-invitations.html
+qrcodebarn_business_pack/qr-code-menu-generator.html
+
+Sitemap files updated:
+sitemap-longtail.xml
+
+Missing <head>:
+googleb39a440e3f58cfcc.html

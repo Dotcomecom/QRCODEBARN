@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Holiday Cottage Welcome Pack QR Code Generator | Airbnb Host QR Pack</title>
+<meta name="description" content="Create a branded holiday cottage welcome pack with WiFi QR, house manual QR, emergency QR, local pub QR and things to do QR. Add your logo, reorder cards, hide unused codes and download a print-ready PDF.">
+<link rel="canonical" href="https://www.qrcodebarn.com/holiday-cottage-qr-welcome-pack.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Holiday Cottage Welcome Pack QR Code Generator">
+<meta property="og:description" content="Build a branded printable QR welcome pack for Airbnb hosts, holiday cottages, B&Bs and guest houses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.qrcodebarn.com/holiday-cottage-qr-welcome-pack.html">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/holiday-pack-v6.css?v=6">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="/assets/holiday-pack-v6.js?v=6" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5QWJQH4FE"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D5QWJQH4FE');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378599294878032" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/">QRCode<span>Barn</span></a>
+    <nav class="nav">
+      <a href="/">Generator</a>
+      <a href="/qr-code-tools.html">Tools</a>
+      <a href="/qr-code-industries.html">Industries</a>
+      <a href="/qr-code-templates.html">Templates</a>
+      <a href="/qr-code-guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="hp6-page">
+  <section class="hp6-topbar">
+    <div class="hp6-brandline">
+      <img src="/qrcodebarn-logo.png" alt="QRCodeBarn" class="hp6-logo-img" onerror="this.style.display='none'">
+      <div>
+        <h1>Holiday Cottage Welcome Pack</h1>
+        <p>Create a branded QR welcome sheet for Airbnb guests, holiday lets, B&Bs and guest houses.</p>
+      </div>
+    </div>
+    <div class="hp6-top-actions">
+      <a href="#how-it-works" class="hp6-ghost">? How it works</a>
+      <a href="#host-ideas" class="hp6-orange">Tips & Ideas</a>
+    </div>
+  </section>
+
+  <section class="hp6-shell" id="pack-builder">
+    <section class="hp6-card hp6-editor" aria-label="Holiday cottage QR editor">
+      <div class="hp6-section-heading">
+        <div class="hp6-icon">✎</div>
+        <div>
+          <h2>1. Customise Your QR Codes</h2>
+          <p>Edit the titles, links and content. Drag rows to reorder, hide unused cards, add a logo and download a print-ready pack.</p>
+        </div>
+      </div>
+
+      <div class="hp6-info">Tip: guests can scan the WiFi QR code and join the network directly on most iPhone and Android devices.</div>
+
+      <div class="hp6-property-grid">
+        <label>Property / cottage name
+          <input id="hpName" value="Your Holiday Cottage">
+        </label>
+        <label>Welcome message
+          <textarea id="hpMessage">Welcome. Scan the QR codes below for useful guest information during your stay.</textarea>
+        </label>
+        <label>Upload your logo
+          <input id="hpLogoUpload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml">
+          <small>Your logo stays in your browser. It is not uploaded to QRCodeBarn.</small>
+        </label>
+      </div>
+
+      <div class="hp6-toolbar">
+        <button type="button" id="hpSaveTemplate">Save template</button>
+        <button type="button" id="hpLoadTemplate">Load template</button>
+        <button type="button" id="hpClearTemplate">Clear saved</button>
+      </div>
+
+      <div class="hp6-table-head">
+        <span></span><span>Show</span><span>Title</span><span>QR Type</span><span>Content / Details</span><span></span>
+      </div>
+
+      <div class="hp6-rows" id="hpRows">
+        <article class="hp6-row hp6-row-open" data-row="1" draggable="true">
+          <div class="hp6-row-main">
+            <div class="hp6-num">1</div>
+            <label class="hp6-show"><input id="hpShow1" type="checkbox" checked> <span>Show</span></label>
+            <label><span>Title</span><input id="hpTitle1" value="WiFi"></label>
+            <label><span>QR Type</span><select id="hpType1"><option value="wifi">WiFi</option><option value="url">URL</option><option value="text">Text</option><option value="phone">Phone</option></select></label>
+            <div class="hp6-wifi-summary">WiFi Details</div>
+            <div class="hp6-drag" title="Drag to reorder">⋮⋮</div>
+          </div>
+          <div class="hp6-wifi-panel">
+            <label>Network name (SSID)<input id="hpWifiSsid1" value="CottageWiFi" placeholder="Guest WiFi"></label>
+            <label>Password<input id="hpWifiPass1" value="Welcome2025" placeholder="WiFi password"></label>
+            <label>Security type<select id="hpWifiSecurity1"><option value="WPA">WPA/WPA2/WPA3</option><option value="WEP">WEP</option><option value="nopass">Open / no password</option></select></label>
+            <label class="hp6-check"><input id="hpWifiHidden1" type="checkbox"> Hidden network</label>
+            <p class="hp6-join">Guests will be prompted to join “<strong id="hpWifiJoinName">CottageWiFi</strong>” when they scan this QR code.</p>
+          </div>
+        </article>
+
+        <article class="hp6-row" data-row="2" draggable="true">
+          <div class="hp6-row-main">
+            <div class="hp6-num">2</div>
+            <label class="hp6-show"><input id="hpShow2" type="checkbox" checked> <span>Show</span></label>
+            <label><span>Title</span><input id="hpTitle2" value="House Manual"></label>
+            <label><span>QR Type</span><select id="hpType2"><option value="url">URL</option><option value="text">Text</option><option value="phone">Phone</option></select></label>
+            <label><span>Content / URL</span><input id="hpContent2" value="https://example.com/house-manual"></label>
+            <div class="hp6-drag" title="Drag to reorder">⋮⋮</div>
+          </div>
+        </article>
+
+        <article class="hp6-row" data-row="3" draggable="true">
+          <div class="hp6-row-main">
+            <div class="hp6-num">3</div>
+            <label class="hp6-show"><input id="hpShow3" type="checkbox" checked> <span>Show</span></label>
+            <label><span>Title</span><input id="hpTitle3" value="Emergency Numbers"></label>
+            <label><span>QR Type</span><select id="hpType3"><option value="url">URL</option><option value="text">Text</option><option value="phone">Phone</option></select></label>
+            <label><span>Content / URL</span><input id="hpContent3" value="https://example.com/emergency"></label>
+            <div class="hp6-drag" title="Drag to reorder">⋮⋮</div>
+          </div>
+        </article>
+
+        <article class="hp6-row" data-row="4" draggable="true">
+          <div class="hp6-row-main">
+            <div class="hp6-num">4</div>
+            <label class="hp6-show"><input id="hpShow4" type="checkbox" checked> <span>Show</span></label>
+            <label><span>Title</span><input id="hpTitle4" value="Local Pub"></label>
+            <label><span>QR Type</span><select id="hpType4"><option value="url">URL</option><option value="text">Text</option><option value="phone">Phone</option></select></label>
+            <label><span>Content / URL</span><input id="hpContent4" value="https://maps.google.com/?q=local+pub"></label>
+            <div class="hp6-drag" title="Drag to reorder">⋮⋮</div>
+          </div>
+        </article>
+
+        <article class="hp6-row" data-row="5" draggable="true">
+          <div class="hp6-row-main">
+            <div class="hp6-num">5</div>
+            <label class="hp6-show"><input id="hpShow5" type="checkbox" checked> <span>Show</span></label>
+            <label><span>Title</span><input id="hpTitle5" value="Things To Do"></label>
+            <label><span>QR Type</span><select id="hpType5"><option value="url">URL</option><option value="text">Text</option><option value="phone">Phone</option></select></label>
+            <label><span>Content / URL</span><input id="hpContent5" value="https://example.com/things-to-do"></label>
+            <div class="hp6-drag" title="Drag to reorder">⋮⋮</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="hp6-section-heading hp6-layout-heading">
+        <div class="hp6-icon">⚙</div>
+        <div>
+          <h2>2. Layout Options</h2>
+          <p>Use fewer cards for larger QR codes. The preview adjusts automatically.</p>
+        </div>
+      </div>
+
+      <div class="hp6-layout-grid">
+        <label>Background colour<input id="hpBg" type="color" value="#fff7ed"></label>
+        <label>Accent colour<input id="hpAccent" type="color" value="#ff5a0a"></label>
+        <label>QR colour<input id="hpQrColor" type="color" value="#111827"></label>
+      </div>
+
+      <div class="hp6-downloads">
+        <button type="button" id="hpPng" class="hp6-download-main">⬇ Download PNG</button>
+        <button type="button" id="hpSvg" class="hp6-download">⬇ Download SVG</button>
+        <button type="button" id="hpPdf" class="hp6-download">⬇ Real PDF</button>
+        <button type="button" id="hpReset" class="hp6-download">↻ Reset All</button>
+      </div>
+    </section>
+
+    <aside class="hp6-card hp6-preview-card" aria-label="Live preview">
+      <div class="hp6-preview-head">
+        <div>
+          <h2>Live Preview</h2>
+          <p>This is how your welcome pack will look for your guests.</p>
+        </div>
+      </div>
+      <div id="hpHidden" aria-hidden="true"></div>
+      <div id="hpPreview" class="hp6-preview"></div>
+    </aside>
+  </section>
+
+  <section class="hp6-seo" id="how-it-works">
+    <div class="hp6-seo-inner">
+      <h2>QR welcome pack for Airbnb hosts and holiday cottage owners</h2>
+      <p>Use this free tool to create a printable QR code welcome pack for a holiday cottage, Airbnb, B&B, guest house, serviced apartment, glamping pod or farm stay. Add useful guest links such as WiFi, house manual, emergency contacts, local pubs, dog walks, check-out instructions and things to do nearby.</p>
+      <div class="hp6-seo-grid" id="host-ideas">
+        <article><h3>For Airbnb hosts</h3><p>Replace repeated guest questions with one branded QR sheet beside the kettle, on the coffee table or inside your welcome folder.</p></article>
+        <article><h3>For holiday cottages</h3><p>Create a guest-friendly printed pack with WiFi access, house rules, local recommendations, taxi numbers and emergency details.</p></article>
+        <article><h3>For B&Bs and guest houses</h3><p>Share breakfast times, local attractions, review links, parking instructions and direct booking links without printing long manuals.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footgrid">
+    <div><div class="logo">QRCode<span>Barn</span></div><p>Free QR code tools, templates and practical QR guides.</p></div>
+    <div><h3>Tools</h3><p><a href="/free-qr-code-generator.html">QR Generator</a><br><a href="/holiday-cottage-qr-welcome-pack.html">Holiday Cottage Pack</a></p></div>
+    <div><h3>Resources</h3><p><a href="/qr-code-guides.html">Guides</a><br><a href="/qr-code-templates.html">Templates</a></p></div>
+    <div><h3>Site</h3><p><a href="/about.html">About</a><br><a href="/privacy.html">Privacy</a><br><a href="/terms.html">Terms</a></p></div>
+  </div>
+<div class="publisher">Owned and operated by <strong>The AI Barn</strong>, 124 City Road, London, EC1V 2NX, United Kingdom.</div></footer>
+</body>
+</html>
