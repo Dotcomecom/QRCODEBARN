@@ -307,3 +307,20 @@
 .rev2a-footer{background:#07101f}.rev2a-footer .publisher{border-top:1px solid rgba(255,255,255,.09);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:18px}.rev2a-footer .publisher p{margin:0;color:#8f9aad;font-size:.82rem}
 @media(max-width:1050px){.rev2a-hero-grid,.rev2a-academy-grid,.rev2a-trust-inner{grid-template-columns:1fr}.rev2a-copy{text-align:center}.rev2a-copy>p{margin-left:auto;margin-right:auto}.rev2a-actions,.rev2a-proof{justify-content:center}.rev2a-generator{max-width:720px;margin:auto}.rev2a-card-grid{grid-template-columns:1fr 1fr}.rev2a-nav .nav{gap:13px}.rev2a-nav .nav a{font-size:.82rem}.rev2a-trust-inner>div:last-child{justify-content:flex-start}}
 @media(max-width:760px){.rev2a-header{position:static}.rev2a-nav{min-height:auto;padding-top:15px;padding-bottom:15px;flex-wrap:wrap}.rev2a-nav .nav{order:3;width:100%;margin:0;overflow:auto;padding:4px 0 2px}.rev2a-nav-cta{margin-left:auto}.rev2a-hero{padding:28px 0 36px}.rev2a-hero-grid{gap:24px}.rev2a-copy h1{font-size:2.8rem}.rev2a-copy>p{font-size:1rem}.rev2a-generator{padding:18px;border-radius:22px}.rev2a-shortcut-grid{grid-template-columns:1fr 1fr}.rev2a-shortcut-grid a{border-bottom:1px solid #edf0f5}.rev2a-card-grid,.rev2a-guide-grid,.rev2a-industry-grid{grid-template-columns:1fr}.rev2a-section,.rev2a-business{padding:58px 0}.rev2a-academy{padding:62px 0}.rev2a-section-head{display:block}.rev2a-section-head>a{display:inline-block;margin-top:15px}.rev2a-trust{padding:22px 0 28px}.rev2a-trust-inner>div:last-child{justify-content:flex-start}}
+
+/* Long-tail QR generator cards */
+.tool-card{background:#fff;color:#111827;border-radius:22px;padding:22px;box-shadow:0 20px 50px rgba(15,23,42,.12);border:1px solid #dbe6f5}
+.tool-card h2{margin:0 0 14px;font-size:1.45rem;line-height:1.16;letter-spacing:-.03em}
+.tool-card label{display:block;margin:12px 0 6px;font-weight:800;color:#111827;font-size:.94rem}
+.tool-card input,.tool-card textarea,.tool-card select{width:100%;padding:12px 14px;border:1px solid #cbd5e1;border-radius:12px;background:#fff;color:#111827;font:inherit;line-height:1.45}
+.tool-card textarea{min-height:100px;resize:vertical}
+.tool-card button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 16px;border:0;border-radius:14px;background:#ff7a1a;color:#fff;font-weight:900;cursor:pointer;box-shadow:0 10px 22px rgba(255,122,26,.18)}
+.tool-card button:hover{background:#e96d0e}
+.tool-card .secondary,.tool-card .light{margin-top:10px;margin-right:10px;background:#fff;color:#111827;border:1px solid #cbd5e1;box-shadow:none}
+.tool-card .light{background:#f8fafc}
+.qr-output{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:18px;align-items:center;margin-top:16px;padding:16px;border:1px solid #e2e8f0;border-radius:18px;background:#f8fbff}
+.qr-output #qrcode{display:grid;place-items:center;min-height:240px;padding:12px;background:#fff;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 12px 28px rgba(15,23,42,.08)}
+.qr-output #qrcode canvas,.qr-output #qrcode img,.qr-output #qrcode svg{display:block;max-width:100%;height:auto}
+.qr-output p{margin:0 0 8px}
+.qr-output .small{color:#64748b;font-size:.9rem}
+@media(max-width:760px){.tool-card{padding:18px}.qr-output{grid-template-columns:1fr}.tool-card button,.tool-card .secondary,.tool-card .light{width:100%;margin-right:0}}
