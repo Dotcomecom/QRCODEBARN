@@ -1,0 +1,2 @@
+Removed all existing JSON-LD and installed validated schema on homepage and guide pages.
+Fixed homepage URL to canonical /.

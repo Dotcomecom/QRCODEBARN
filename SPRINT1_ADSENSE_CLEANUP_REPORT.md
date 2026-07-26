@@ -1,0 +1,251 @@
+# SPRINT1_ADSENSE_CLEANUP_REPORT
+
+## Validation Summary
+- HTML files scanned: 163
+- Pages still containing visible "Ad space": 0
+- Pages containing unfinished visible placeholder text: 0
+- Pages missing meta robots: 0
+- Pages without privacy-policy links: 0
+- Pages without contact links: 0
+- Pages with zero or multiple H1 elements: 0
+- Public pages missing the AdSense publisher ID (trust pages required): 0
+
+## Placeholder Preservation Report
+- Preserved all legitimate form-control placeholder attributes (input/textarea).
+- Removed no legitimate placeholders.
+- Total preserved placeholder attributes: 208
+- website/qrcodebarn/business-card-qr-code.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/create-qr-code-free.html: retained (1) placeholder attribute(s) for user input guidance. Examples: https://example.com
+- website/qrcodebarn/custom-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/dynamic-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/event-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/free-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/free-qr-code-maker.html: retained (1) placeholder attribute(s) for user input guidance. Examples: https://example.com
+- website/qrcodebarn/generate-qr-code-online.html: retained (1) placeholder attribute(s) for user input guidance. Examples: https://example.com
+- website/qrcodebarn/holiday-cottage-qr-welcome-pack.html: retained (2) placeholder attribute(s) for user input guidance. Examples: Guest WiFi, WiFi password
+- website/qrcodebarn/pdf-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-creator.html: retained (1) placeholder attribute(s) for user input guidance. Examples: https://example.com
+- website/qrcodebarn/qr-code-for-airbnb.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your Airbnb listing, guidebook, WiFi page or direct booking URL
+- website/qrcodebarn/qr-code-for-booking-property.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your Booking.com, Airbnb, VRBO or direct booking URL
+- website/qrcodebarn/qr-code-for-business-card.html: retained (8) placeholder attribute(s) for user input guidance. Examples: Jane, Smith, Acme Ltd, Founder, +44 7700 900123
+- website/qrcodebarn/qr-code-for-calendar-event.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-dropbox.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-email-signature.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-email.html: retained (3) placeholder attribute(s) for user input guidance. Examples: hello@example.com, Enquiry, Hello, I would like more information.
+- website/qrcodebarn/qr-code-for-facebook.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-google-drive.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-google-forms.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-google-maps.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-google-reviews-uk.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your Google review link
+- website/qrcodebarn/qr-code-for-google-reviews.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-guest-welcome-book.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your digital guest welcome book URL
+- website/qrcodebarn/qr-code-for-guest-wifi.html: retained (2) placeholder attribute(s) for user input guidance. Examples: Guest WiFi, WiFi password
+- website/qrcodebarn/qr-code-for-holiday-cottage.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your holiday cottage guest information page
+- website/qrcodebarn/qr-code-for-instagram.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-linkedin.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-onedrive.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-paypal.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-pdf.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste the public URL of your PDF
+- website/qrcodebarn/qr-code-for-phone-number.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Enter a phone number
+- website/qrcodebarn/qr-code-for-property-brochures.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your property brochure, floorplan or video tour URL
+- website/qrcodebarn/qr-code-for-restaurant-menu.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your online menu URL
+- website/qrcodebarn/qr-code-for-restaurant-pdf-menu.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your PDF menu URL
+- website/qrcodebarn/qr-code-for-sms.html: retained (2) placeholder attribute(s) for user input guidance. Examples: +447..., Please contact me about...
+- website/qrcodebarn/qr-code-for-snapchat.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-social-media.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Paste your social media profile URL
+- website/qrcodebarn/qr-code-for-spotify.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-stripe.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-tiktok.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-venmo.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-whatsapp-business.html: retained (2) placeholder attribute(s) for user input guidance. Examples: 447700900000, Hi, I would like more information.
+- website/qrcodebarn/qr-code-for-whatsapp.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-wifi.html: retained (2) placeholder attribute(s) for user input guidance. Examples: Your WiFi name, WiFi password
+- website/qrcodebarn/qr-code-for-x-twitter.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-youtube.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-for-zoom-meeting.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/qr-code-generator.html: retained (1) placeholder attribute(s) for user input guidance. Examples: https://example.com
+- website/qrcodebarn/qr-code-maker.html: retained (1) placeholder attribute(s) for user input guidance. Examples: https://example.com
+- website/qrcodebarn/qr-code-svg-generator.html: retained (1) placeholder attribute(s) for user input guidance. Examples: Enter the content for your SVG QR code
+- website/qrcodebarn/qr-code-template-builder.html: retained (9) placeholder attribute(s) for user input guidance. Examples: https://example.com, Guest WiFi, password, hello@example.com, Customer enquiry
+- website/qrcodebarn/qr-code-with-logo.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/restaurant-menu-qr-code.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/svg-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/track-qr-code-scans.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+- website/qrcodebarn/wifi-qr-code-generator.html: retained (5) placeholder attribute(s) for user input guidance. Examples: https://example.com, Cafe WiFi, password, Jane Smith, Smith Studio
+
+## Remaining Issues Lists
+### Pages still containing visible ad placeholder wording
+- None
+
+### Pages with unfinished visible placeholder text
+- None
+
+### Pages missing meta robots
+- None
+
+### Pages missing privacy-policy link
+- None
+
+### Pages missing contact link
+- None
+
+### Pages with zero or multiple H1
+- None
+
+### Public trust pages missing AdSense publisher ID/script
+- None
+
+## Files Changed
+-  M website/qrcodebarn/about.html
+-  M website/qrcodebarn/ai-content-policy.html
+-  M website/qrcodebarn/airbnb-host-qr-welcome-pack.html
+-  M website/qrcodebarn/are-qr-codes-free.html
+-  M website/qrcodebarn/are-qr-codes-safe.html
+-  M website/qrcodebarn/best-free-qr-code-generator.html
+-  M website/qrcodebarn/best-qr-code-size-for-printing.html
+-  M website/qrcodebarn/business-card-qr-code.html
+-  M website/qrcodebarn/contact.html
+-  M website/qrcodebarn/corrections-policy.html
+-  M website/qrcodebarn/create-qr-code-free.html
+-  M website/qrcodebarn/custom-qr-code-generator.html
+-  M website/qrcodebarn/dynamic-qr-code-generator.html
+-  M website/qrcodebarn/editorial-policy.html
+-  M website/qrcodebarn/event-qr-code-generator.html
+-  M website/qrcodebarn/faq.html
+-  M website/qrcodebarn/free-qr-code-generator-no-signup.html
+-  M website/qrcodebarn/free-qr-code-generator-with-logo.html
+-  M website/qrcodebarn/free-qr-code-generator.html
+-  M website/qrcodebarn/free-qr-code-maker.html
+-  M website/qrcodebarn/generate-qr-code-online.html
+-  M website/qrcodebarn/holiday-cottage-qr-welcome-pack.html
+-  M website/qrcodebarn/how-long-do-qr-codes-last.html
+-  M website/qrcodebarn/how-to-create-a-qr-code-for-free.html
+-  M website/qrcodebarn/how-to-make-a-qr-code.html
+-  M website/qrcodebarn/how-to-test-a-qr-code.html
+-  M website/qrcodebarn/index.html
+-  M website/qrcodebarn/pdf-qr-code-generator.html
+-  M website/qrcodebarn/privacy-policy.html
+-  M website/qrcodebarn/privacy.html
+-  M website/qrcodebarn/qr-code-accessibility.html
+-  M website/qrcodebarn/qr-code-best-practices.html
+-  M website/qrcodebarn/qr-code-business-ideas.html
+-  M website/qrcodebarn/qr-code-campaign-tracking.html
+-  M website/qrcodebarn/qr-code-colours.html
+-  M website/qrcodebarn/qr-code-creator.html
+-  M website/qrcodebarn/qr-code-distance-guide.html
+-  M website/qrcodebarn/qr-code-error-correction.html
+-  M website/qrcodebarn/qr-code-for-accountants.html
+-  M website/qrcodebarn/qr-code-for-airbnb-hosts.html
+-  M website/qrcodebarn/qr-code-for-airbnb.html
+-  M website/qrcodebarn/qr-code-for-beauty-salons.html
+-  M website/qrcodebarn/qr-code-for-booking-property.html
+-  M website/qrcodebarn/qr-code-for-business-card.html
+-  M website/qrcodebarn/qr-code-for-cafes.html
+-  M website/qrcodebarn/qr-code-for-calendar-event.html
+-  M website/qrcodebarn/qr-code-for-car-dealers.html
+-  M website/qrcodebarn/qr-code-for-charities.html
+-  M website/qrcodebarn/qr-code-for-churches.html
+-  M website/qrcodebarn/qr-code-for-clinics.html
+-  M website/qrcodebarn/qr-code-for-construction-sites.html
+-  M website/qrcodebarn/qr-code-for-dentists.html
+-  M website/qrcodebarn/qr-code-for-dropbox.html
+-  M website/qrcodebarn/qr-code-for-electricians.html
+-  M website/qrcodebarn/qr-code-for-email-signature.html
+-  M website/qrcodebarn/qr-code-for-email.html
+-  M website/qrcodebarn/qr-code-for-estate-agents.html
+-  M website/qrcodebarn/qr-code-for-events.html
+-  M website/qrcodebarn/qr-code-for-facebook.html
+-  M website/qrcodebarn/qr-code-for-farm-shops.html
+-  M website/qrcodebarn/qr-code-for-food-trucks.html
+-  M website/qrcodebarn/qr-code-for-garages.html
+-  M website/qrcodebarn/qr-code-for-google-drive.html
+-  M website/qrcodebarn/qr-code-for-google-forms.html
+-  M website/qrcodebarn/qr-code-for-google-maps.html
+-  M website/qrcodebarn/qr-code-for-google-reviews-uk.html
+-  M website/qrcodebarn/qr-code-for-google-reviews.html
+-  M website/qrcodebarn/qr-code-for-guest-welcome-book.html
+-  M website/qrcodebarn/qr-code-for-guest-wifi.html
+-  M website/qrcodebarn/qr-code-for-gyms.html
+-  M website/qrcodebarn/qr-code-for-hairdressers.html
+-  M website/qrcodebarn/qr-code-for-holiday-cottage.html
+-  M website/qrcodebarn/qr-code-for-holiday-cottages.html
+-  M website/qrcodebarn/qr-code-for-hotels.html
+-  M website/qrcodebarn/qr-code-for-instagram.html
+-  M website/qrcodebarn/qr-code-for-law-firms.html
+-  M website/qrcodebarn/qr-code-for-libraries.html
+-  M website/qrcodebarn/qr-code-for-linkedin.html
+-  M website/qrcodebarn/qr-code-for-market-stalls.html
+-  M website/qrcodebarn/qr-code-for-menus.html
+-  M website/qrcodebarn/qr-code-for-museums.html
+-  M website/qrcodebarn/qr-code-for-music-venues.html
+-  M website/qrcodebarn/qr-code-for-offices.html
+-  M website/qrcodebarn/qr-code-for-onedrive.html
+-  M website/qrcodebarn/qr-code-for-packaging.html
+-  M website/qrcodebarn/qr-code-for-paypal.html
+-  M website/qrcodebarn/qr-code-for-pdf.html
+-  M website/qrcodebarn/qr-code-for-personal-trainers.html
+-  M website/qrcodebarn/qr-code-for-phone-number.html
+-  M website/qrcodebarn/qr-code-for-photographers.html
+-  M website/qrcodebarn/qr-code-for-plumbers.html
+-  M website/qrcodebarn/qr-code-for-property-brochures.html
+-  M website/qrcodebarn/qr-code-for-real-estate-open-house.html
+-  M website/qrcodebarn/qr-code-for-recruitment.html
+-  M website/qrcodebarn/qr-code-for-restaurant-menu.html
+-  M website/qrcodebarn/qr-code-for-restaurant-pdf-menu.html
+-  M website/qrcodebarn/qr-code-for-restaurants.html
+-  M website/qrcodebarn/qr-code-for-retail-shops.html
+-  M website/qrcodebarn/qr-code-for-schools.html
+-  M website/qrcodebarn/qr-code-for-sms.html
+-  M website/qrcodebarn/qr-code-for-snapchat.html
+-  M website/qrcodebarn/qr-code-for-social-media.html
+-  M website/qrcodebarn/qr-code-for-sports-clubs.html
+-  M website/qrcodebarn/qr-code-for-spotify.html
+-  M website/qrcodebarn/qr-code-for-stripe.html
+-  M website/qrcodebarn/qr-code-for-tiktok.html
+-  M website/qrcodebarn/qr-code-for-universities.html
+-  M website/qrcodebarn/qr-code-for-venmo.html
+-  M website/qrcodebarn/qr-code-for-vets.html
+-  M website/qrcodebarn/qr-code-for-warehouses.html
+-  M website/qrcodebarn/qr-code-for-weddings.html
+-  M website/qrcodebarn/qr-code-for-whatsapp-business.html
+-  M website/qrcodebarn/qr-code-for-whatsapp.html
+-  M website/qrcodebarn/qr-code-for-wifi.html
+-  M website/qrcodebarn/qr-code-for-x-twitter.html
+-  M website/qrcodebarn/qr-code-for-youtube.html
+-  M website/qrcodebarn/qr-code-for-zoom-meeting.html
+-  M website/qrcodebarn/qr-code-generator-for-business.html
+-  M website/qrcodebarn/qr-code-generator-for-wifi.html
+-  M website/qrcodebarn/qr-code-generator.html
+-  M website/qrcodebarn/qr-code-guides.html
+-  M website/qrcodebarn/qr-code-industries.html
+-  M website/qrcodebarn/qr-code-maker.html
+-  M website/qrcodebarn/qr-code-on-business-cards.html
+-  M website/qrcodebarn/qr-code-on-flyers.html
+-  M website/qrcodebarn/qr-code-on-posters.html
+-  M website/qrcodebarn/qr-code-print-resolution.html
+-  M website/qrcodebarn/qr-code-svg-generator.html
+-  M website/qrcodebarn/qr-code-template-builder.html
+-  M website/qrcodebarn/qr-code-templates.html
+-  M website/qrcodebarn/qr-code-tools.html
+-  M website/qrcodebarn/qr-code-with-logo.html
+-  M website/qrcodebarn/restaurant-menu-qr-code.html
+-  M website/qrcodebarn/short-links-for-qr-codes.html
+-  M website/qrcodebarn/static-vs-dynamic-qr-codes.html
+-  M website/qrcodebarn/svg-qr-code-generator.html
+-  M website/qrcodebarn/terms.html
+-  M website/qrcodebarn/track-qr-code-scans.html
+-  M website/qrcodebarn/trust-centre.html
+-  M website/qrcodebarn/utm-links-for-qr-codes.html
+-  M website/qrcodebarn/why-is-my-qr-code-not-scanning.html
+-  M website/qrcodebarn/wifi-qr-code-generator.html
+- ?? SPRINT1_ADSENSE_CLEANUP_REPORT.md
+- ?? sprint1-validation.csv
+- ?? website/qrcodebarn/Archive.zip
+- ?? website/qrcodebarn/Archive/
+- ?? website/qrcodebarn/assets/assets/
+- ?? website/qrcodebarn/assets/cafe.png
+- ?? website/qrcodebarn/assets/hero-cafe.webp
+- ?? website/qrcodebarn/assets/hero-event.webp
+- ?? website/qrcodebarn/assets/hero-holiday-cottage.webp
+- ?? website/qrcodebarn/assets/hero-pub.webp
+- ?? website/qrcodebarn/assets/hero-wifi.webp

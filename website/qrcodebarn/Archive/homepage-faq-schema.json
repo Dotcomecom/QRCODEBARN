@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a QR code generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A QR code generator is an online tool that creates QR codes for websites, text, email, phone numbers, SMS messages, WiFi details and other data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is QRCodeBarn free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QRCodeBarn is free to use for creating simple QR codes online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to sign up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No signup is needed to create simple QR codes with QRCodeBarn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create a WiFi QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, QRCodeBarn can create WiFi QR codes when you enter the network details in the correct format."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I test my QR code before printing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Always test QR codes on at least two devices before printing or publishing them."
+      }
+    }
+  ]
+}
