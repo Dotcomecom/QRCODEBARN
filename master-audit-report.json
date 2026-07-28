@@ -1,0 +1,130 @@
+{
+  "audit_scope": {
+    "repository": "/Users/robfalconer/Documents/GitHub/QRCODEBARN",
+    "branch": "main",
+    "site": "QRCodeBarn",
+    "canonical_domain": "https://www.qrcodebarn.com",
+    "audit_date": "2026-07-28",
+    "production_files_scanned": 162,
+    "live_site_checked": "Partial",
+    "git_working_tree_status": "dirty"
+  },
+  "release_status": "PASS WITH REVIEW",
+  "scope_statement": "Repository audit: PASS WITH REVIEW within the implemented local audit scope. Live deployment and external platform behavior were not fully verified.",
+  "pre_repair_totals": {
+    "production_pages": 162,
+    "indexable_pages": 162,
+    "noindex_pages": 0,
+    "error_groups": 0,
+    "warning_groups": 1,
+    "review_groups": 1,
+    "info_groups": 2,
+    "total_occurrence_records": 139,
+    "affected_source_pages": 123,
+    "og_missing_pages": 114,
+    "duplicate_indexable_title_groups": 9,
+    "duplicate_indexable_description_groups": 1,
+    "duplicate_indexable_h1_groups": 10
+  },
+  "post_repair_totals": {
+    "production_pages": 162,
+    "indexable_pages": 148,
+    "noindex_pages": 14,
+    "error_groups": 0,
+    "warning_groups": 0,
+    "review_groups": 1,
+    "info_groups": 2,
+    "total_occurrence_records": 2,
+    "affected_source_pages": 2,
+    "og_missing_pages": 0,
+    "duplicate_indexable_title_groups": 0,
+    "duplicate_indexable_description_groups": 0,
+    "duplicate_indexable_h1_groups": 1
+  },
+  "repairs_applied": {
+    "server_configuration": [
+      {
+        "file": "website/qrcodebarn/.htaccess",
+        "change": "Added RewriteRule ^index\\.html$ / [L,R=301] with request guard"
+      }
+    ],
+    "metadata_repairs": {
+      "og_core_tags_added": [
+        "og:title",
+        "og:description",
+        "og:url"
+      ],
+      "og_support_tags_added_when_missing": [
+        "og:type",
+        "og:site_name"
+      ]
+    },
+    "alias_consolidation": {
+      "strategy": "canonical to primary + robots noindex,follow",
+      "aliases_updated": {
+        "about-us.html": "https://www.qrcodebarn.com/about.html",
+        "contact.html": "https://www.qrcodebarn.com/contact-us.html",
+        "privacy.html": "https://www.qrcodebarn.com/privacy-policy.html",
+        "qr-code-faq.html": "https://www.qrcodebarn.com/faq.html",
+        "qr-codes-for-events.html": "https://www.qrcodebarn.com/qr-code-for-events.html",
+        "qr-codes-for-restaurants.html": "https://www.qrcodebarn.com/qr-code-for-restaurants.html",
+        "qr-codes-for-schools.html": "https://www.qrcodebarn.com/qr-code-for-schools.html",
+        "qr-code-generator-for-wifi.html": "https://www.qrcodebarn.com/wifi-qr-code-generator.html",
+        "create-qr-code-free.html": "https://www.qrcodebarn.com/free-qr-code-generator.html",
+        "free-qr-code-maker.html": "https://www.qrcodebarn.com/free-qr-code-generator.html",
+        "generate-qr-code-online.html": "https://www.qrcodebarn.com/free-qr-code-generator.html",
+        "qr-code-creator.html": "https://www.qrcodebarn.com/free-qr-code-generator.html",
+        "qr-code-generator.html": "https://www.qrcodebarn.com/free-qr-code-generator.html",
+        "qr-code-maker.html": "https://www.qrcodebarn.com/free-qr-code-generator.html"
+      }
+    }
+  },
+  "findings": {
+    "resolved": [
+      {
+        "id": "WARNING-001",
+        "category": "Open Graph metadata coverage",
+        "status": "resolved",
+        "evidence": "Missing OG pages reduced from 114 to 0"
+      },
+      {
+        "id": "REVIEW-001",
+        "category": "Duplicate and alias page clusters",
+        "status": "resolved as explicit aliases",
+        "evidence": "Indexable duplicate-title groups reduced from 9 to 0; duplicate-description groups reduced from 1 to 0"
+      }
+    ],
+    "remaining": [
+      {
+        "id": "REVIEW-002",
+        "category": "Indexable H1 intent overlap",
+        "severity": "REVIEW",
+        "targets": [
+          "index.html",
+          "free-qr-code-generator.html"
+        ],
+        "occurrence_count": 2,
+        "reason": "Both indexable pages intentionally use the same primary H1"
+      }
+    ]
+  },
+  "validation_performed": [
+    "Reran full local production audit script (/tmp/qrcodebarn_audit.js)",
+    "Recomputed OG completeness and duplicate-group counts from refreshed inventory",
+    "Spot-checked alias pages for canonical targets and robots noindex,follow",
+    "Verified workspace errors: none"
+  ],
+  "local_live_distinction": {
+    "local": "Repository-level changes verified",
+    "live": "Not verified after repair",
+    "statement": "Live production behavior has not been verified by this audit."
+  },
+  "git_state": {
+    "staged_files": 0,
+    "unstaged_files": 126,
+    "untracked_files": 2,
+    "commit_status": "No commit performed",
+    "push_status": "No push performed",
+    "deployment_status": "No deployment performed"
+  }
+}

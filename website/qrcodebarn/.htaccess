@@ -1,5 +1,10 @@
 # QRCodeBarn canonical host: force www
 RewriteEngine On
+
+# Consolidate the alternate homepage URL before any host normalization.
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+
 RewriteCond %{HTTP_HOST} ^qrcodebarn\.com$ [NC]
 RewriteRule ^(.*)$ https://www.qrcodebarn.com/$1 [L,R=301]
 
