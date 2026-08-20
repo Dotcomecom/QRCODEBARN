@@ -1,0 +1,26 @@
+QRCodeBarn function fix pack
+
+This pack fixes two pages:
+
+1) qr-code-for-business-card.html
+- Creates a working vCard/business card QR code.
+- Removes the bug where placeholder text stayed over the generated QR code.
+- Adds a PNG download button.
+
+2) qr-code-with-logo.html
+- Adds a logo upload field.
+- Generates a QR code with the uploaded logo placed in the centre.
+- Adds size/colour controls and PNG download.
+
+Upload instructions:
+- Extract this ZIP on your computer.
+- Upload both HTML files directly into the qrcodebarn.com public_html folder.
+- Overwrite the existing files when asked.
+- Do not upload the enclosing folder itself.
+
+After upload test:
+https://www.qrcodebarn.com/qr-code-for-business-card.html
+https://www.qrcodebarn.com/qr-code-with-logo.html
+
+Both pages use the QRCode JavaScript library from jsDelivr CDN:
+https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js

@@ -1,0 +1,11 @@
+QRCodeBarn Structured Data Fix
+
+Source ZIP: qrcodebarn_professional_v21.zip
+Pages given safe JSON-LD: 4
+what-is-a-qr-code.html
+static-vs-dynamic-qr-codes.html
+qr-codes-for-restaurants.html
+index.html
+
+All remaining JSON-LD blocks were parsed as valid JSON after repair.
+Fix applied for Google Search Console error: Structured data with syntax errors / Incorrect value type.
