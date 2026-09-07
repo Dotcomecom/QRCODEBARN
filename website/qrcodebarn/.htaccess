@@ -2,6 +2,9 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+RewriteCond %{REQUEST_URI} !^/ads\.txt$ [NC]
+RewriteRule ^ads\.txt/?$ /ads.txt [R=301,L,NC]
+
 # Force HTTPS and www in a single redirect.
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\.qrcodebarn\.com$ [NC]
