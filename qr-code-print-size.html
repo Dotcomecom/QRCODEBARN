@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<script src="/assets/consent-bootstrap.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QR Code Print Size Chart (Scan Distance Rule) | QRCodeBarn</title>
+<meta name="description" content="Estimate QR code size for print with the 10:1 scan-distance rule, then compare minimum and recommended sizes for cards, signs, posters and banners.">
+<meta property="og:title" content="QR Code Print Size Chart (Scan Distance Rule)">
+<meta property="og:description" content="Calculate a starting QR code print size and compare practical sizes by use case.">
+<meta property="og:url" content="https://www.qrcodebarn.com/qr-code-print-size.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="QRCodeBarn">
+<link rel="canonical" href="https://www.qrcodebarn.com/qr-code-print-size.html">
+<meta name="robots" content="index,follow">
+<meta name="google-adsense-account" content="ca-pub-2378599294878032">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/consent-manager.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How big should a printed QR code be?","description":"Estimate QR code size for print with the 10:1 scan-distance rule and compare practical sizes by use case.","url":"https://www.qrcodebarn.com/qr-code-print-size.html","mainEntityOfPage":"https://www.qrcodebarn.com/qr-code-print-size.html","inLanguage":"en-GB","author":{"@type":"Organization","name":"The AI Barn"},"publisher":{"@type":"Organization","name":"QRCodeBarn","url":"https://www.qrcodebarn.com/"}}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/">QRCode<span>Barn</span></a><nav class="nav"><a href="/">Generator</a><a href="/qr-code-tools.html">Tools</a><a href="/qr-code-for-printing.html">Printing</a><a href="/qr-code-templates.html">Templates</a><a href="/qr-code-guides.html">Guides</a><a href="/faq.html">FAQ</a></nav></div></header>
+<main class="wrap"><div class="breadcrumbs"><a href="/">Home</a> / <a href="/qr-code-for-printing.html">QR codes for printing</a> / Print size</div><article class="article">
+<h1>How big should a printed QR code be?</h1>
+<p class="lead">Use the 10:1 scan-distance rule to estimate a starting size, then test a real proof with the final artwork, material and lighting.</p>
+
+<h2>The 10:1 rule in one sentence</h2>
+<p>Divide the expected scanning distance by 10: a code scanned from 50 cm should start at about 5 cm wide, including its quiet zone.</p>
+<div class="panel tool">
+<h2>QR print size calculator</h2>
+<label for="scanDistance">Expected scan distance</label>
+<div class="row"><div><input id="scanDistance" type="number" min="20" step="10" value="30"></div><div><select id="distanceUnit" aria-label="Distance unit"><option value="cm">centimetres</option><option value="in">inches</option><option value="m">metres</option></select></div></div>
+<button class="button" id="calculateSize" type="button">Calculate starting size</button>
+<p id="sizeResult" aria-live="polite"><strong>Starting size: 3 cm / 1.18 in.</strong> Print one proof and test it in context.</p>
+</div>
+<p><strong>2 × 2 cm is the usual floor for a simple URL code scanned at arm’s length.</strong> Treat that as a practical baseline, not a universal guarantee. More encoded data creates smaller modules and may need a larger physical code.</p>
+
+<h2>Size chart by use case</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Application</th><th>Minimum starting point</th><th>Recommended</th><th>Typical scan distance</th></tr></thead>
+<tbody>
+<tr><td>Business card</td><td>20 × 20 mm</td><td>25 × 25 mm</td><td>20–30 cm</td></tr>
+<tr><td>Flyer or leaflet</td><td>20 × 20 mm</td><td>25–30 mm</td><td>25–40 cm</td></tr>
+<tr><td>Table tent</td><td>25 × 25 mm</td><td>30–40 mm</td><td>30–50 cm</td></tr>
+<tr><td>A4 counter sign</td><td>30 × 30 mm</td><td>40–50 mm</td><td>40–60 cm</td></tr>
+<tr><td>Poster</td><td>50 × 50 mm</td><td>75–100 mm</td><td>0.5–1 m</td></tr>
+<tr><td>Window sign</td><td>100 × 100 mm</td><td>150–200 mm</td><td>1–2 m</td></tr>
+<tr><td>Banner</td><td>200 × 200 mm</td><td>Distance ÷ 10</td><td>2 m and up</td></tr>
+</tbody></table></div>
+<p>These dimensions include the quiet zone. They assume a short URL, strong dark-on-light contrast and a flat, non-reflective surface.</p>
+
+<h2>Why logos and colours force a bigger code</h2>
+<p>A logo covers modules, while low-contrast colours make module edges harder for a camera to distinguish. Error correction can recover limited damage, but it does not make every design reliable. Increase the size, keep the logo modest, and test the final exported artwork whenever you change colour or add branding.</p>
+
+<h2>Quiet zone is part of the size, not extra</h2>
+<p>The empty border around a QR code must be at least four modules wide on every side. Include that quiet zone inside the dimensions you give your designer or printer. Do not let text, borders, crop marks or background patterns enter it.</p>
+
+<h2>How to test size with a phone, not a ruler only</h2>
+<ol>
+<li>Print the code at its intended final dimensions without “fit to page” scaling.</li>
+<li>Place it where people will scan it, with the finished lighting and surface.</li>
+<li>Start at the expected distance and scan with both iPhone and Android cameras.</li>
+<li>Test from a slight angle and with an older phone if your audience may use one.</li>
+<li>Increase the code until scanning is quick and repeatable, then approve the run.</li>
+</ol>
+
+<h2>Generate at the right export size</h2>
+<p>Use SVG whenever possible because it stays sharp at any output size. If a printer requires PNG, export enough pixels for the final dimensions at 300–600 DPI and do not enlarge it later.</p>
+<p><a class="button" href="/qr-code-template-builder.html">Open the template builder</a> <a class="button alt" href="/free-qr-code-generator.html">Generate a QR code</a></p>
+<p>The template builder includes layouts already sized for business cards, table tents and A4 signs. For format, contrast, material and proofing guidance, return to the <a href="/qr-code-for-printing.html">QR codes for printing hub</a>.</p>
+</article></main>
+<footer class="footer"><div class="wrap footgrid"><div><div class="logo">QRCode<span>Barn</span></div><p>Free QR code tools, templates and practical publishing guides.</p></div><div><h3>Print</h3><p><a href="/qr-code-for-printing.html">Printing hub</a><br><a href="/qr-code-template-builder.html">Template builder</a><br><a href="/free-qr-code-generator.html">Generator</a></p></div><div><h3>Use cases</h3><p><a href="/qr-code-for-restaurant-menu.html">Menu QR</a><br><a href="/qr-code-for-business-card.html">Business card QR</a><br><a href="/qr-code-for-wifi.html">WiFi QR</a></p></div><div><h3>Site</h3><p><a href="/about.html">About</a><br><a href="/privacy-policy.html">Privacy</a><br><a href="/contact-us.html">Contact</a></p></div></div></footer>
+<script>
+(function(){
+  var input=document.getElementById('scanDistance');
+  var unit=document.getElementById('distanceUnit');
+  var result=document.getElementById('sizeResult');
+  function calculate(){
+    var distance=parseFloat(input.value);
+    if(!Number.isFinite(distance)||distance<=0){result.textContent='Enter a scan distance greater than zero.';return;}
+    var distanceCm=unit.value==='m'?distance*100:unit.value==='in'?distance*2.54:distance;
+    var sizeCm=Math.max(2,distanceCm/10);
+    result.innerHTML='<strong>Starting size: '+sizeCm.toFixed(1)+' cm / '+(sizeCm/2.54).toFixed(2)+' in.</strong> Print one proof and test it in context.';
+  }
+  document.getElementById('calculateSize').addEventListener('click',calculate);
+  input.addEventListener('input',calculate);
+  unit.addEventListener('change',calculate);
+})();
+</script>
+</body>
+</html>

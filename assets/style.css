@@ -323,4 +323,5 @@
 .qr-output #qrcode canvas,.qr-output #qrcode img,.qr-output #qrcode svg{display:block;max-width:100%;height:auto}
 .qr-output p{margin:0 0 8px}
 .qr-output .small{color:#64748b;font-size:.9rem}
-@media(max-width:760px){.tool-card{padding:18px}.qr-output{grid-template-columns:1fr}.tool-card button,.tool-card .secondary,.tool-card .light{width:100%;margin-right:0}}
+@media(max-width:1050px){.qr-output{grid-template-columns:1fr}.tool-card button,.tool-card .secondary,.tool-card .light{width:100%;margin-right:0}}
+@media(max-width:760px){.tool-card{padding:18px}}

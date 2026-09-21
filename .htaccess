@@ -1,0 +1,17 @@
+# QRCodeBarn canonical host and URL normalization
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Force HTTPS and www in a single redirect.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.qrcodebarn\.com$ [NC]
+RewriteRule ^ https://www.qrcodebarn.com%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^index\.html$ https://www.qrcodebarn.com/ [R=301,L]
+RewriteRule ^best-qr-code-size-for-printing\.html$ https://www.qrcodebarn.com/qr-code-print-size.html [R=301,L]
+RewriteRule ^business-card-qr-code\.html$ https://www.qrcodebarn.com/qr-code-for-business-card.html [R=301,L]
+RewriteRule ^pdf-qr-code-generator\.html$ https://www.qrcodebarn.com/qr-code-for-pdf.html [R=301,L]
+RewriteRule ^google-review-qr-code\.html$ https://www.qrcodebarn.com/qr-code-for-google-reviews.html [R=301,L]
+RewriteRule ^restaurant-menu-qr-code\.html$ https://www.qrcodebarn.com/qr-code-for-restaurant-menu.html [R=301,L]
+RewriteRule ^qr-code-generator-for-wifi\.html$ https://www.qrcodebarn.com/wifi-qr-code-generator.html [R=301,L]
+</IfModule>
